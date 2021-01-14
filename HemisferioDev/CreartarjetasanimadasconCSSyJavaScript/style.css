@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,700');
+
+
+* {
+    box-sizing: border-box;
+}
+
+*:after, *:before {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: #C7C3CC;
+    font-family: 'Fira Sans', sans-serif;
+    transition: all 0.3s ease-in-out;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Contenedor principal */
+
+
+.container {
+    width: 600px;
+    max-width: 100%;
+    height: 300px;
+    min-height: auto;
+    background-color: transparent;
+    position: relative;
+    top: 25%;
+    left: 25%;
+    border-radius: 20px;
+    -webkit-box-shadow: 1px 1px 16px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 16px -3px rgba(0,0,0,0.75);
+    box-shadow: 1px 1px 16px -3px rgba(0,0,0,0.75);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+
+/* Fin de contenedor principal  */
+
+.contenedor-frente {
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr; 
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(-200%);
+}
+
+img.img-jugador {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    width: 300px;
+    height: auto;
+    z-index: 400;
+    transition: transform 0.3s ease-in;
+}
+
+.ficha-jugador {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    color: white;
+    padding: .5rem;
+    z-index: 300;
+    transition: transform 0.3s ease-in;
+}
+
+.ficha-jugador p {
+    font-size: .8rem;
+}
+
+/* reverso de la tarjeta */
+
+.contenedor-reverso {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/juventus-stadium.jpg);
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(-100%);
+}
+
+.contenedor-reverso::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(53,51, 61, .4);
+}
+
+.datos-jugador {
+    display: grid;
+    height: 100%;
+    grid-column: 2 / 3;
+    grid-template-rows: 1fr 2fr 1fr;
+    z-index: 200;
+    position: relative;
+}
+
+.datos-jugador h1.nombre {
+    color: white;
+    text-align: center;
+    grid-row: 1 / 2;
+}
+
+.datos-jugador .datos-breves {
+    color: white;
+    list-style: none;
+    grid-row: 2 / 3;
+}
+
+.datos-breves li {
+    margin: .5rem 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+button.btnFicha {
+    text-transform: uppercase;
+    background-color: white;
+    width: 50%;
+    height: 2.5rem;
+    margin-left: 25%;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 5px;
+    font-family: 'Fira Sans', sans-serif;
+    -webkit-box-shadow: 1px 1px 8px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 8px -3px rgba(0,0,0,0.75);
+    box-shadow: 1px 1px 8px -3px rgba(0,0,0,0.75);
+    transition: transform 80ms ease-in;
+}
+
+button:active {
+    transform: scale(0.90);
+}
+
+button:focus {
+    outline: none;
+}
+
+.contenedor-reverso {
+    opacity: 1;
+}
+
+/* Animaciones */
+
+.arriba-foto,
+.arriba-ficha {
+    transform: translateY(0);
+}
+
+.arriba-contenedor {
+    transform: translateY(0);
+}
+
+.abajo-contenedor {
+    transform: translateY(-100%);
+    z-index: 600;
+} 
+
+
+.arriba-reverso {
+    transform: translateY(0);
+    z-index: 200;
+}
+
+.oscuro {
+    background-color: #111111;
+}
