@@ -9,17 +9,17 @@
 
 /* SHARE */
 .bg-gradient {
-  background: rgb(18, 35, 221);
+  background: rgb(59, 72, 221);
   background: linear-gradient(
     90deg,
-    rgba(18, 35, 221, 1) 0%,
-    rgba(28, 123, 204, 1) 62%,
-    rgba(83, 145, 218, 1) 100%
+    rgb(59, 72, 221) 0%,
+    rgb(56, 102, 207) 62%,
+    rgb(61, 109, 172) 100%
   );
 }
 
 section {
-  position: relative;  
+  position: relative;
   overflow: hidden;
 }
 
@@ -53,7 +53,7 @@ section {
   font-weight: 600;
   cursor: pointer;
   margin-top: 30px;
-  transition: .5s all ease;
+  transition: 0.5s all ease;
 }
 
 .btn-basic:hover {
@@ -108,4 +108,104 @@ section {
 
 .icons-section-second {
   width: 65px;
+}
+
+/*? SECTION THIRD */
+.section-third {
+  margin-top: 75px;
+}
+.curtain-reverse {
+  height: 100%;
+  transform: skewY(5deg);
+  transform-origin: top left;
+}
+.img-container-two {
+  background-image: url(./img/section-third/scientific-2.svg);
+}
+.text-container-two {
+  color: #484848;
+}
+
+/*? SECTION FOURTH */
+.section-fourth {
+  padding: 75px 0px;
+}
+
+/*? SECTION FIFTH  */
+.section-fifth {
+  margin: 50px 0px;
+}
+.box {
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.18);
+  border-radius: 25px;  
+}
+.price-container{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+}
+.price-tag{
+  font-weight: bold;
+  color: #47b0e7;
+}
+.box-text{
+  margin-top: 30px;
+  text-align: justify;
+  color: #484848;
+  font-size: 13px;
+}
+
+/*? SECTION SIXTH */
+.section-sixth{
+  padding: 70px 0px;
+}
+.wrapper-sixth{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#newsletter-form{
+  width: 90%;
+  max-width: 500px;
+}
+#newsletter-input{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+.btn-newsletter{
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+/*? FOOTER */
+footer{
+  margin: 50px 20px 0px;
+}
+.legal-links-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.legal-link-text{
+  color: #ccc;
+  text-decoration: none;
+  font-size: 12px;
+  transition: .5s all ease;
+}
+.legal-link-text:focus{
+  outline: none;
+}
+.legal-link-text:hover{
+  color: #484848;
 }
