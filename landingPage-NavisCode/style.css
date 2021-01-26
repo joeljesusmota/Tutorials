@@ -8,16 +8,12 @@
 }
 
 /* SHARE */
-.bg-gradient {
-  background: rgb(59, 72, 221);
-  background: linear-gradient(
-    90deg,
-    rgb(59, 72, 221) 0%,
-    rgb(56, 102, 207) 62%,
-    rgb(61, 109, 172) 100%
-  );
+.bg-gradient{
+  background: rgb(81,132,250);
+  background: -moz-linear-gradient(90deg, rgba(81,132,250,1) 0%, rgba(69,186,237,1) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(81,132,250,1) 0%, rgba(69,186,237,1) 100%);
+  background: linear-gradient(90deg, rgba(81,132,250,1) 0%, rgba(69,186,237,1) 100%);
 }
-
 section {
   position: relative;
   overflow: hidden;
